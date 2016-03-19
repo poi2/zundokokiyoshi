@@ -1,4 +1,5 @@
 Z, D, K = "ズン", "ドコ", "キ・ヨ・シ"
-ZD, Z4D = [Z, D], [Z] * 4 + [D]
-until Z4D == (song = Array.new(5){ ZD.sample }) do; end
-p [song, K].join(" ")
+def zundoko
+  until [Z] * 4 + [D] == (song = 5.times.map{ [Z, D].sample }) do; end
+  puts [song, K].join(" ")
+end
